@@ -23,7 +23,7 @@ function getLearn() {
   if (money > learnNumCost) {
     money = money -= learnNumCost;
     document.getElementById("moneyNum").innerHTML = money;
-    learnNumCost = learnNumCost += learnNumCost *= 1.5;
+    learnNumCost = learnNumCost += learnNumCost *= 1.2;
     document.getElementById("learnNum").innerHTML = learnNumCost;
     completionPlus = completionPlus += 0.01;
     document.getElementById("workExtraNum").innerHTML = completionPlus;
