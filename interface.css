@@ -1,1 +1,51 @@
-
+body{
+    text-align: center;
+    font-family: monospace, monospace;
+    font-size: 45px;
+    margin: 10px;
+}
+button {
+    height: 80px;
+    width: 400px;
+    background-color: #e8e6e3;
+    text-align: center;
+    color: #2c2921;
+    border-radius: 5px;
+    font-family:  monospace, monospace;
+    font-size: 25px;
+}
+.buttonLeft{
+      position: relative;
+     right: 40%;
+     text-decoration: none;
+     display: inline-block;
+}
+.buttonRight{
+     position: relative;
+     left: 40%;
+     text-decoration: none;
+     display: inline-block;
+}
+.logoDiv{
+    color: #dddddd;
+    position: relative;
+    font-family: monospace, monospace;
+    font-size: 45px;
+    border-style: outset outset outset outset;
+    border-radius: 7px;
+    text-align: center;
+    letter-spacing: 15px;
+    border-color: #dddddd;
+    border-width: 5px;
+    top: 50px;
+    width: 420px;
+    margin: auto;
+}
+.white{
+    color: #dddddd;
+}
+.completionPara {
+     position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
