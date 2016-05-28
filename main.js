@@ -10,16 +10,7 @@ function getEarn() {
 
 function getWork() {
   completion += completionPlus;
-  document.getElementById("completionNum").innerHTML = completion;
-  
-  function getEarn() {
-  money += 1;
-  document.getElementById("moneyNum").innerHTML = money;
-}
-
-function getWork() {
-  completion += completionPlus;
-  document.getElementById("completionNum").innerHTML = completion;
+  document.getElementById("completionNum").innerHTML = completion; 
   
   if (completion > 5 <5.3) {
     window.alert("module completed!");
@@ -64,6 +55,11 @@ function getWork() {
  if (completion < 100) {
    window.alert("Wow! You've escaped from earth and will now survive!");
  }
+}
+  
+  function getEarn() {
+  money += 1;
+  document.getElementById("moneyNum").innerHTML = money;
 }
 
 function getLearn() {
