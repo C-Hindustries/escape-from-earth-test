@@ -3,6 +3,7 @@ var completion = 0
 var completionPlus = 0.01
 var learnNumCost = 100
 var employNumCost = 100
+var earnPlus = 0
 
 function getEarn() {
   money += 1;
@@ -15,7 +16,7 @@ function getWork() {
 }
   
   function getEarn() {
-  money += 1;
+  money =  money += earnPlus;
   document.getElementById("moneyNum").innerHTML = money;
 }
 
@@ -35,8 +36,9 @@ function getEmploy() {
   if (money > employNumCost) {
     money = money-= employNumCost;
     document.getElementById("moneyNum").innerHTML = money;
-    employNumCost = employNumCost += employNumCost *= 1.5;
+    employNumCost = employNumCost += employNumCost *= 1.2;
     document.getElementById("employNum").innerHTML = employNumCost;
-    completion = completion+= 0.002;
+    employPlus = employPlus += 1;
+    document.getElementById("earnNum").innerHTML = employPlus;
   }
 }
