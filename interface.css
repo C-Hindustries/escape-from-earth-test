@@ -5,8 +5,8 @@ body{
     margin: 10px;
 }
 button {
-    height: 80px;
-    width: 400px;
+    height: 96px;
+    width: 96px;
     background-color: #e8e6e3;
     text-align: center;
     color: #2c2921;
@@ -55,6 +55,10 @@ button {
     top: 50px;
     width: 420px;
     margin: auto; 
+}
+.whiteSmall{
+    color: #dddddd;
+    font-size: 18;
 }
 .white{
     color: #dddddd;
