@@ -3,7 +3,7 @@ var completion = 0
 var completionPlus = 0.01
 var learnNumCost = 100
 var employNumCost = 100
-var earnPlus = 0
+var earnPlus = 1
 
 function getEarn() {
   money += 1;
