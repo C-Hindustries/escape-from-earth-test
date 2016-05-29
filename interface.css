@@ -41,6 +41,21 @@ button {
     width: 420px;
     margin: auto;
 }
+.finisherDiv{
+   color: #dddddd;
+    position: relative;
+    font-family: monospace, monospace;
+    font-size: 25px;
+    border-style: outset outset outset outset;
+    border-radius: 7px;
+    text-align: center;
+    letter-spacing: 15px;
+    border-color: #dddddd;
+    border-width: 5px;
+    top: 50px;
+    width: 420px;
+    margin: auto; 
+}
 .white{
     color: #dddddd;
 }
