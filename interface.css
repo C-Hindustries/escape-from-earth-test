@@ -5,8 +5,8 @@ body{
     margin: 10px;
 }
 button {
-    height: 96px;
-    width: 96px;
+    height: 80px;
+    width: 400px;
     background-color: #e8e6e3;
     text-align: center;
     color: #2c2921;
@@ -52,13 +52,19 @@ button {
     letter-spacing: 15px;
     border-color: #dddddd;
     border-width: 5px;
-    top: 50px;
-    width: 420px;
+    top: 96px;
+    width: 96px;
     margin: auto; 
 }
 .whiteSmall{
     color: #dddddd;
     font-size: 18;
+}
+.divRight{
+    position: relative;
+     left: 40%;
+     text-decoration: none;
+     display: inline-block;
 }
 .white{
     color: #dddddd;
