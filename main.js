@@ -13,6 +13,10 @@ function getEarn() {
 function getWork() {
   completion += completionPlus;
   document.getElementById("completionNum").innerHTML = completion; 
+  
+  if (completion >= 100) {
+    window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)!");
+  }
 }
   
   function getEarn() {
