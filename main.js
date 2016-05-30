@@ -27,6 +27,26 @@ function getWork() {
     employNumCost = 100;
     document.getElementById("employNum").innerHTML = employNumCost;
   }
+  
+    if (completion >= 5 <=5.3) {
+    window.alert("module completed!");
+  }
+  
+  if (completion >= 10 <= 10.3){
+  window.alert("boosters completed!");  
+  }
+  
+  if (completion >= 20 <= 20.3) {
+    window.alert("engines completed!");
+  }
+  
+  if (completion >= 30 <= 30.3) {
+    window.alert("fuel tanks completed!");
+  }
+  
+  if (completion >= 50 <= 50.3){
+    window.alert("main fusalge completed!");
+  }
 }
   
   function getEarn() {
