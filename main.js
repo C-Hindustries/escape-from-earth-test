@@ -57,12 +57,3 @@ function getEmploy() {
   }
 }
 
-function getPromotion() {
-  if (money > PromotionCost) {
-    money = money -= PromotionCost;
-    document.getElementById("moneyNum").innerHTML = money;
-    PromotionCost = PromotionCost += PromotionCost *= 1.2;
-    document.getElementById("promotionPrice").innerHTML = PromotionCost;
-    earnPlus = earnPlus += 1;
-    document.getElementById("earnNum").innerHTML = earnPlus;
-  }
