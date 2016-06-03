@@ -83,3 +83,34 @@ function addCompletion() {
   document.getElementById("completionNum").innerHTML = completion;
   document.getElementById("addPerSecond").innerHTML = employPlusTimer;
 }
+
+function getSave(){
+	"use strict";
+	var save = {
+	  money: money,
+    completion: completion,
+    completionPlus: completionPlus,
+    learnNumCost: learnNumCost,
+    employNumCost: employNumCost,
+    earnPlus: earnPlus,
+    promtionCost: promtionCost,
+    employPlusTimer: employPlusTimer,
+};
+	localStorage.setItem("save",JSON.stringify(save));
+	alert("Save Successful!");
+}
+
+function getLoad(){
+	"use strict";
+	var savegame = JSON.parse(localStorage.getItem("save"));
+	if (typeof savegame.money !== "undefined") money = savegame.money;
+	if (typeof savegame.completion !== "undefined") completion = savegame.completion;
+	if (typeof savegame.completionPlus !== "undefined") completionPlus = savegame.completionPlus;
+	if (typeof savegame.learnNumCost !== "undefined") learnNumCost = savegame.learnNumCost;
+	if (typeof savegame.employNumCost !== "undefined")  employNumCost = savegame. employNumCost;
+	if (typeof savegame.earnPlus !== "undefined") earnPlus = savegame.earnPlus;
+	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
+	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
+
+alert("Load Successful!");
+}
