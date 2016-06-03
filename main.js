@@ -5,6 +5,7 @@ var learnNumCost = 100;
 var employNumCost = 100;
 var earnPlus = 1;
 var promtionCost = 100;
+var employPlusTimer = 0
 
 function getEarn() {
   money += 1;
@@ -52,8 +53,17 @@ function getEmploy() {
     document.getElementById("moneyNum").innerHTML = money;
     employNumCost = employNumCost += employNumCost *= 1.2;
     document.getElementById("employNum").innerHTML = employNumCost;
-    earnPlus = earnPlus += 1;
-    document.getElementById("earnNum").innerHTML = employPlus;
+    employPlusTimer = employPlusTimer += 0.001
   }
 }
 
+// 1 Second Loop
+window.setInterval(function(){
+  // Put code to be run every second in here.
+ addCompletion();
+}, 1000);
+
+function addCompletion() {
+  completion = completion += employPlusTimer;
+  document.getElementById("completionNum").innerHTML = completion
+}
