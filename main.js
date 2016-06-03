@@ -66,5 +66,4 @@ function getPromotion() {
     document.getElementById("promotionPrice").innerHTML = PromotionCost;
     earnPlus = earnPlus += 1;
     document.getElementById("earnNum").innerHTML = earnPlus;
-    
   }
