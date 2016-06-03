@@ -1,10 +1,10 @@
-var money = 0
-var completion = 0
-var completionPlus = 0.01
-var learnNumCost = 100
-var employNumCost = 100
-var earnPlus = 1
-var promtionCost = 100
+var money = 0;
+var completion = 0;
+var completionPlus = 0.01;
+var learnNumCost = 100;
+var employNumCost = 100;
+var earnPlus = 1;
+var promtionCost = 100;
 
 function getEarn() {
   money += 1;
@@ -43,7 +43,6 @@ function getLearn() {
     document.getElementById("learnNum").innerHTML = learnNumCost;
     completionPlus = completionPlus += 0.01;
     document.getElementById("workExtraNum").innerHTML = completionPlus;
-    
   }
 }
 
