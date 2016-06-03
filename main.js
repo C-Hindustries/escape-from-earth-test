@@ -53,7 +53,7 @@ function getEmploy() {
     document.getElementById("moneyNum").innerHTML = money;
     employNumCost = employNumCost += employNumCost *= 1.2;
     document.getElementById("employNum").innerHTML = employNumCost;
-    employPlusTimer = employPlusTimer += 0.001
+    employPlusTimer = employPlusTimer += 0.001;
   }
 }
 
@@ -65,5 +65,6 @@ window.setInterval(function(){
 
 function addCompletion() {
   completion = completion += employPlusTimer;
-  document.getElementById("completionNum").innerHTML = completion
+  document.getElementById("completionNum").innerHTML = completion;
+  document.getElementById("addPerSecond").innerHTML = employPlusTimer;
 }
