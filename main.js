@@ -76,6 +76,8 @@ function addCompletion() {
     document.getElementById("learnNum").innerHTML = learnNumCost;
     employNumCost = 100;
     document.getElementById("employNum").innerHTML = employNumCost;
+    employNumCost = 0
+    document.getElementById("addPerSecond").innerHTML = employPlusTimer;
   }
   completion = completion += employPlusTimer;
   document.getElementById("completionNum").innerHTML = completion;
