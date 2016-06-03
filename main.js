@@ -64,6 +64,19 @@ window.setInterval(function(){
 }, 1000);
 
 function addCompletion() {
+  if (completion >= 100) {
+    window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)! Would you like restart?");
+    completion = 0;
+    document.getElementById("completionNum").innerHTML = completion;
+    money = 0
+    document.getElementById("moneyNum").innerHTML = money;
+    completionPlus = 0.01;
+    document.getElementById("workExtraNum").innerHTML = completionPlus;
+    learnNumCost = 100;
+    document.getElementById("learnNum").innerHTML = learnNumCost;
+    employNumCost = 100;
+    document.getElementById("employNum").innerHTML = employNumCost;
+  }
   completion = completion += employPlusTimer;
   document.getElementById("completionNum").innerHTML = completion;
   document.getElementById("addPerSecond").innerHTML = employPlusTimer;
