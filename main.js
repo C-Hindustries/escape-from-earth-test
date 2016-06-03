@@ -52,7 +52,7 @@ function getEmploy() {
     document.getElementById("moneyNum").innerHTML = money;
     employNumCost = employNumCost += employNumCost *= 1.2;
     document.getElementById("employNum").innerHTML = employNumCost;
-    employPlus = employPlus += 1;
+    earnPlus = earnPlus += 1;
     document.getElementById("earnNum").innerHTML = employPlus;
   }
 }
