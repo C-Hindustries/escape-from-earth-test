@@ -133,5 +133,6 @@ function getLoad(){
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
 
 alert("Load Successful! (may not update stats immediately)");
-function refreshSats()
+
+refreshStats();
 }
