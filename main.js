@@ -1,10 +1,14 @@
 var money = 0;
 var completion = 0;
+var n = completion.toFixed(2);
 var completionPlus = 0.01;
 var learnNumCost = 100;
+var n = learnNumCost.toFixed();
 var employNumCost = 100;
+var n = employNumCost.toFixed();
 var earnPlus = 1;
 var promtionCost = 100;
+var n = promtionCost.toFixed();
 var employPlusTimer = 0
 
 function getEarn() {
