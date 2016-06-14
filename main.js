@@ -11,6 +11,22 @@ var promtionCost = 100;
 var n = promtionCost.toFixed();
 var employPlusTimer = 0
 
+function refreshStats() {
+  money = money;
+  document.getElementById("moneyNum").innerHTML = money;
+  learnNumCost = learnNumCost;
+  document.getElementById("learnNum").innerHTML = learnNumCost;
+  completion = completion;
+  document.getElementById("completionNum").innerHTML = completion;
+  completionPlus = completionPlus;
+  document.getElementById("workExtraNum").innerHTML = completionPlus;
+  employNumCost = employNumCost;
+  document.getElementById("employNum").innerHTML = employNumCost;
+  earnPlus = earnPlus;
+  employPlusTimer = employPlusTimer;
+  document.getElementById("addPerSecond").innerHTML = employPlusTimer;
+}
+
 function getEarn() {
   money += 1;
   document.getElementById("moneyNum").innerHTML = money;
@@ -117,4 +133,5 @@ function getLoad(){
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
 
 alert("Load Successful! (may not update stats immediately)");
+function refreshSats()
 }
