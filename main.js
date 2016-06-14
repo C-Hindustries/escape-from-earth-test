@@ -132,7 +132,7 @@ function getLoad(){
 	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
 
-alert("Load Successful! (may not update stats immediately)");
+alert("Load Successful!");
 
 refreshStats();
 }
