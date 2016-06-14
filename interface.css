@@ -99,3 +99,30 @@ button:hover {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.largerButton {
+    height: 110px;
+    width: 400px;
+    background-color: #e8e6e3;
+    text-align: center;
+    color: #2c2921;
+    border-radius: 5px;
+    font-family:  monospace, monospace;
+    font-size: 25px;
+    border-style: outset outset outset outset;
+    border-width: 8px;
+}
+
+.largerButton:hover {
+    height: 110px;
+    width: 400px;
+    background-color: #2c2921;
+    text-align: center;
+    color: #e8e6e3;
+    border-radius: 5px;
+    font-family:  monospace, monospace;
+    font-size: 25px;
+    border-style: outset outset outset outset;
+    border-color: #e8e6e3;
+    border-width: 8px;
+}
