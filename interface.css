@@ -4,6 +4,7 @@ body{
     font-size: 45px;
     margin: 10px;
 }
+
 button {
     height: 80px;
     width: 400px;
@@ -13,19 +14,36 @@ button {
     border-radius: 5px;
     font-family:  monospace, monospace;
     font-size: 25px;
+    border-style: outset outset outset outset;
 }
+
+button:hover {
+    height: 80px;
+    width: 400px;
+    background-color: #2c2921;
+    text-align: center;
+    color: #e8e6e3;
+    border-radius: 5px;
+    font-family:  monospace, monospace;
+    font-size: 25px;
+    border-style: outset outset outset outset;
+    border-color: #e8e6e3;
+}
+
 .buttonLeft{
       position: relative;
      right: 40%;
      text-decoration: none;
      display: inline-block;
 }
+
 .buttonRight{
      position: relative;
      left: 40%;
      text-decoration: none;
      display: inline-block;
 }
+
 .logoDiv{
     color: #dddddd;
     position: relative;
@@ -41,6 +59,7 @@ button {
     width: 420px;
     margin: auto;
 }
+
 .finisherDiv{
    color: #dddddd;
     position: relative;
@@ -56,19 +75,23 @@ button {
     width: 96px;
     margin: auto; 
 }
+
 .whiteSmall{
     color: #dddddd;
     font-size: 18;
 }
+
 .divRight{
     position: relative;
      left: 40%;
      text-decoration: none;
      display: inline-block;
 }
+
 .white{
     color: #dddddd;
 }
+
 .completionPara {
      position: relative;
   top: 50%;
