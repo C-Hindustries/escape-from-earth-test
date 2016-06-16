@@ -128,8 +128,8 @@ button:hover {
 }
 
 .levelDiv {
-    height: 80px;
-    width: 400px;
+    height: 50px;
+    width: 1500px;
     background-color: #e8e6e3;
     text-align: center;
     color: #2c2921;
@@ -141,15 +141,15 @@ button:hover {
 }
 
 .levelDiv:hover {
-    height: 80px;
-    width: 400px;
+    height: 50px;
+    width: 1500px;
     background-color: #e8e6e3;
     text-align: center;
-    color: #0033cc;
+    color: #2c2921;
     border-radius: 5px;
     font-family:  monospace, monospace;
     font-size: 25px;
     border-style: outset outset outset outset;
     border-width: 8px;
-    text-shadow: 0 0 8px #FF0000;
+    position: relative
 }
