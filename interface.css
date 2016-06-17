@@ -156,3 +156,15 @@ button:hover {
     right: 50%;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.contentDiv {
+    width: 100%;
+    text-align: center;
+}
+
+.starterDiv{
+    text-align: center;
+}
