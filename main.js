@@ -138,5 +138,9 @@ refreshStats();
 }
 
 function startGame() {
-	
+     var gameStartPrompt = prompt("Welcome! Please Choose a Name For Your rocket!");
+     rocketName = gameStartPrompt;
+     document.getElementById("rocketName").innerHTML = rocketName;
+     document.getElementById("starterDiv").className = "hidden";
+     document.getElementById("mainContentDiv").className = "contentDiv";
 }
