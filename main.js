@@ -136,3 +136,7 @@ alert("Load Successful!");
 
 refreshStats();
 }
+
+function startGame() {
+	
+}
