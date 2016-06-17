@@ -138,6 +138,7 @@ button:hover {
     font-size: 25px;
     border-style: outset outset outset outset;
     border-width: 8px;
+    right: 50%;
 }
 
 .levelDiv:hover {
@@ -151,9 +152,7 @@ button:hover {
     font-size: 25px;
     border-style: outset outset outset outset;
     border-width: 8px;
-    position: relative
-}
-
-.centerDiv {
+    position: relative 
     right: 50%;
 }
+
