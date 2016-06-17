@@ -153,3 +153,7 @@ button:hover {
     border-width: 8px;
     position: relative
 }
+
+.centerDiv {
+    right: 50%;
+}
