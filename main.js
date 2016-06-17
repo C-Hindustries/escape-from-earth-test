@@ -142,5 +142,5 @@ function startGame() {
      rocketName = gameStartPrompt;
      document.getElementById("rocketName").innerHTML = rocketName;
      document.getElementById("starterDiv").className = "hidden";
-     document.getElementById("mainContentDiv").className = "contentDiv";
+     document.getElementById("contentDiv").className = "contentDiv";
 }
