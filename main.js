@@ -30,6 +30,8 @@ function refreshStats() {
   clickNum = clickNum;
   level = level;
   document.getElementById("levelNum").innerHTML = level;
+  rocketName = gameStartPrompt;
+  document.getElementById("rocketName").innerHTML = rocketName;
 }
 
 function getEarn() {
@@ -84,6 +86,7 @@ function getLearn() {
 }
 
 function getEmploy() {
+	
   if (money > employNumCost) {
     money = money-= employNumCost;
     document.getElementById("moneyNum").innerHTML = money;
@@ -100,6 +103,7 @@ window.setInterval(function(){
 }, 1000);
 
 function addCompletion() {
+	
   if (completion >= 100) {
     window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)!");
     window.alert("would you like to restart?");
@@ -116,6 +120,7 @@ function addCompletion() {
     employNumCost = 0
     document.getElementById("addPerSecond").innerHTML = employPlusTimer;
   }
+  
   completion = completion += employPlusTimer;
   document.getElementById("completionNum").innerHTML = completion;
   document.getElementById("addPerSecond").innerHTML = employPlusTimer;
@@ -154,6 +159,8 @@ function getLoad(){
 	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
 
 alert("Load Successful!");
+rocketName = gameStartPrompt;
+document.getElementById("rocketName").innerHTML = rocketName;
 
 refreshStats();
 }
@@ -185,6 +192,8 @@ function startLoad() {
 	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
 
 alert("Load Successful!");
+rocketName = gameStartPrompt;
+document.getElementById("rocketName").innerHTML = rocketName;
 
 refreshStats();
 }
