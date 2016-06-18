@@ -205,7 +205,7 @@ function getReward() {
     money = money -= rewardCost;
     document.getElementById("moneyNum").innerHTML = money;
     rewardCost = rewardCost += rewardCost *= 1.2;
-    document.getElementById("learnNum").innerHTML = rewardCost;
+    document.getElementById("rewardSpan").innerHTML = rewardCost;
     money = money += Math.floor((Math.random() * (rewardCost *= 2)) + 1);
     document.getElementById("moneyNum").innerHTML = money;
 }
