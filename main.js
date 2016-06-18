@@ -52,6 +52,13 @@ function getWork() {
   }
   
   if (completion >= 100) {
+  	window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)!");
+    setTimeout(function(){
+    	document.getElementById("all_container").className = "hidden";
+    	document.getElementById("body").className = "finaleImg";
+    }, 3000);
+    document.getElementById("body").className = "escapeImg";
+    document.getElementById("all_container").className = "all_container";
     window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)! Would you like restart?");
     completion = 0;
     document.getElementById("completionNum").innerHTML = completion;
