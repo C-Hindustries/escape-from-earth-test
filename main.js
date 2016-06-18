@@ -12,6 +12,7 @@ var n = promtionCost.toFixed();
 var employPlusTimer = 0
 var clickNum = 0
 var level = 0
+var rewardCost = 100
 
 function refreshStats() {
   money = money;
@@ -117,7 +118,7 @@ function addCompletion() {
     document.getElementById("learnNum").innerHTML = learnNumCost;
     employNumCost = 100;
     document.getElementById("employNum").innerHTML = employNumCost;
-    employNumCost = 0
+    employPlusTimer = 0
     document.getElementById("addPerSecond").innerHTML = employPlusTimer;
   }
   
@@ -196,4 +197,14 @@ rocketName = gameStartPrompt;
 document.getElementById("rocketName").innerHTML = rocketName;
 
 refreshStats();
+}
+
+function getReward() {
+   if (money > rewardCost) {
+    money = money-= rewardCost;
+    document.getElementById("moneyNum").innerHTML = money;
+    rewardCost = rewardCost += rewardCost *= 1.2;
+    document.getElementById("rewardSpan").innerHTML = rewardCost;
+    money = money += Math.floor((Math.random() * (rewardCost *2)) - (rewardCost *2));
+    document.getElementById("moneyNum").innerHTML = money;
 }
