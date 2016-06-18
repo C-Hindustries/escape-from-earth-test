@@ -143,6 +143,7 @@ function startGame() {
      document.getElementById("rocketName").innerHTML = rocketName;
      document.getElementById("starterDiv").className = "hidden";
      document.getElementById("contentDiv").className = "contentDiv";
+     document.getElementById("loaderDiv").className = "hidden";
 }
 
 function startLoad() {
