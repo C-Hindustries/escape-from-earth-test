@@ -13,6 +13,8 @@ var employPlusTimer = 0
 var clickNum = 0
 var level = 0
 var rewardCost = 100
+var rewardCost2 = 250
+var rewardCost3 = 500
 
 function refreshStats() {
   money = money;
@@ -140,6 +142,9 @@ function getSave(){
     employPlusTimer: employPlusTimer,
     level: level,
     clickNum: clickNum,
+    rewardCost: rewardCost,
+    rewardCost2: rewardCost2,
+    rewardCost3: rewardCost3,
 };
 	localStorage.setItem("save",JSON.stringify(save));
 	alert("Save Successful!");
@@ -157,6 +162,7 @@ function getLoad(){
 	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
 	if (typeof savegame.clickNum !== "undefined") employPlusTimer = savegame.clickNum;
+	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
 	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
 
 alert("Load Successful!");
@@ -206,4 +212,22 @@ function getReward() {
     money += Math.floor((Math.random() * 200) + 1);
     document.getElementById("moneyNum").innerHTML = money;
 }
+}
+
+function getReward2() {
+    if (money > rewardCost2) {
+      money = money -= rewardCost2;
+      document.getElementById("moneyNum").innerHTML = money;
+      money += Math.floor((Math.random() * 500) + 1);
+      document.getElementById("moneyNum").innerHTML = money;
+} 
+}
+
+function getReward3() {
+    if (money > rewardCost2) {
+      money = money -= rewardCost3;
+      document.getElementById("moneyNum").innerHTML = money;
+      money += Math.floor((Math.random() * 1000) + 1);
+      document.getElementById("moneyNum").innerHTML = money;
+} 
 }
