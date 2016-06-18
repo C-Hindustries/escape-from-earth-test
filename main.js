@@ -200,6 +200,7 @@ refreshStats();
 }
 
 function getReward() {
+	"use strict";
    if (money >= rewardCost) {
     money = money-= rewardCost;
     document.getElementById("moneyNum").innerHTML = money;
@@ -207,5 +208,6 @@ function getReward() {
     document.getElementById("rewardSpan").innerHTML = rewardCost;
     money = money += Math.floor((Math.random() * (rewardCost *= 2)) + 1);
     document.getElementById("moneyNum").innerHTML = money;
+    refreshStats();
 }
 }
