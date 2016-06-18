@@ -200,8 +200,7 @@ refreshStats();
 }
 
 function getReward() {
-	"use strict";
-   if (money >= rewardCost) {
+   if (money > rewardCost) {
     money = money -= rewardCost;
     document.getElementById("moneyNum").innerHTML = money;
     rewardCost = rewardCost += rewardCost *= 1.2;
