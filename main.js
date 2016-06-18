@@ -200,12 +200,12 @@ refreshStats();
 }
 
 function getReward() {
-   if (money > rewardCost) {
+   if (money >= rewardCost) {
     money = money-= rewardCost;
     document.getElementById("moneyNum").innerHTML = money;
-    rewardCost = rewardCost += rewardCost *= 1.2;
+    rewardCost = rewardCost += (rewardCost *= 1.2);
     document.getElementById("rewardSpan").innerHTML = rewardCost;
-    money = money += Math.floor(Math.random() * (rewardCost *= 2)) - rewardCost;
+    money = money += Math.floor((Math.random() * (rewardCost *= 2)) + 1);
     document.getElementById("moneyNum").innerHTML = money;
 }
 }
