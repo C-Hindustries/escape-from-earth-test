@@ -208,6 +208,5 @@ function getReward() {
     document.getElementById("rewardSpan").innerHTML = rewardCost;
     money = money += Math.floor((Math.random() * (rewardCost *= 2)) + 1);
     document.getElementById("moneyNum").innerHTML = money;
-    refreshStats();
 }
 }
