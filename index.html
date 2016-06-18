@@ -19,11 +19,15 @@
      <button class= "starterButton" id= "starterButton" onclick= "startLoad()">click to load previous game!</button>
    </div>
    <div class= "hidden" id="contentDiv">
-  </p>
   <center>
-  <p>
+    <table>
+  <td>
     <div class= "levelDiv">level: <span id="levelNum">0</span></div>
-  </p>
+  </td>
+  <td>
+    <button class="randomButton" onclick= "getReward()">buy random reward (can be good or bad) for: £<span id= "rewardSpan">100</span></button>
+  </td>
+  </table>
   </center>
  <p>
    <button id="buttonWork" class= "buttonCenter; largerButton" onclick="getWork()"><strong>spend a minute building <span id="rocketName"> </span>!+<span id="workExtraNum">0.01</span>% and <span id="addPerSecond">0</span>/second</strong></button>
