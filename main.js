@@ -208,3 +208,4 @@ function getReward() {
     money = money += Math.floor((Math.random() * (rewardCost *2)) - (rewardCost *2));
     document.getElementById("moneyNum").innerHTML = money;
 }
+}
