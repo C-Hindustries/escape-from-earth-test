@@ -55,9 +55,9 @@ function getWork() {
   	window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)!");
     setTimeout(function(){
     	document.getElementById("all_container").className = "hidden";
-    	document.getElementById("body").className = "finaleImg";
-    }, 3000);
-    document.getElementById("body").className = "escapeImg";
+    	document.getElementById("body").style.backgroundImage = "url('http://i.imgur.com/umRXsuV.gif')";
+    }, 10000);
+    document.getElementById("body").style.backgroundImage = "url('http://dottech.org/wp-content/uploads/2013/11/apocalypse-wallpaper-1920x1080.jpg')";
     document.getElementById("all_container").className = "all_container";
     window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)! Would you like restart?");
     completion = 0;
@@ -110,9 +110,9 @@ function addCompletion() {
     window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)!");
     setTimeout(function(){
     	document.getElementById("all_container").className = "hidden";
-    	document.getElementById("body").className = "finaleImg";
+    	document.getElementById("body").style.backgroundImage = "url('http://i.imgur.com/umRXsuV.gif')";
     }, 10000);
-    document.getElementById("body").className = "escapeImg";
+    document.getElementById("body").style.backgroundImage = "url('http://dottech.org/wp-content/uploads/2013/11/apocalypse-wallpaper-1920x1080.jpg')";
     document.getElementById("all_container").className = "all_container";
     completion = 0;
     document.getElementById("completionNum").innerHTML = completion;
