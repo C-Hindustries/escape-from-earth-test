@@ -101,12 +101,10 @@ window.setInterval(function(){
 function addCompletion() {
   if (completion >= 100) {
     window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)!");
-    
     setTimeout(function(){
     	document.getElementById("all_container").className = "hidden";
     	document.getElementById("body").className = "finaleImg";
     }, 10000);
-    
     document.getElementById("body").className = "escapeImg";
     document.getElementById("all_container").className = "all_container";
     completion = 0;
