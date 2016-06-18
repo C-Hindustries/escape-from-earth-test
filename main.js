@@ -10,6 +10,8 @@ var earnPlus = 1;
 var promtionCost = 100;
 var n = promtionCost.toFixed();
 var employPlusTimer = 0
+var clickNum = 0
+var level = 0
 
 function refreshStats() {
   money = money;
@@ -25,6 +27,9 @@ function refreshStats() {
   earnPlus = earnPlus;
   employPlusTimer = employPlusTimer;
   document.getElementById("addPerSecond").innerHTML = employPlusTimer;
+  clickNum = clickNum;
+  level = level;
+  document.getElementById("levelNum").innerHTML = level;
 }
 
 function getEarn() {
@@ -34,7 +39,17 @@ function getEarn() {
 
 function getWork() {
   completion += completionPlus;
+  clickNum += 1;
   document.getElementById("completionNum").innerHTML = completion; 
+  
+  if (clickNum = 100) {
+  	window.alert("level up! Now that you have completed a part of your rocket, you will now recieve a random award - keep your fingers crossed!");
+  	money = money += Math.floor((Math.random() * 10000) + 1);
+  	document.getElementById("moneyNum").innerHTML = money;
+  	level = level += 1;
+  	document.getElementById("levelNum").innerHTML = level;
+  	clickNum = 0;
+  }
   
   if (completion >= 100) {
     window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)! Would you like restart?");
@@ -102,6 +117,16 @@ function addCompletion() {
   completion = completion += employPlusTimer;
   document.getElementById("completionNum").innerHTML = completion;
   document.getElementById("addPerSecond").innerHTML = employPlusTimer;
+  clickNum = clickNum += 1;
+  
+    if (clickNum = 100) {
+  	window.alert("level up! Now that you have completed a part of your rocket, you will now recieve a reward between 1 and 10,000 - keep your fingers crossed!");
+  	money = money += Math.floor((Math.random() * 10000) + 1);
+  	document.getElementById("moneyNum").innerHTML = money;
+  	level = level += 1;
+  	document.getElementById("levelNum").innerHTML = level;
+  	clickNum = 0;
+  }
 }
 
 function getSave(){
@@ -115,6 +140,8 @@ function getSave(){
     earnPlus: earnPlus,
     promtionCost: promtionCost,
     employPlusTimer: employPlusTimer,
+    level: level,
+    clickNum: clickNum,
 };
 	localStorage.setItem("save",JSON.stringify(save));
 	alert("Save Successful!");
@@ -131,6 +158,8 @@ function getLoad(){
 	if (typeof savegame.earnPlus !== "undefined") earnPlus = savegame.earnPlus;
 	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
+	if (typeof savegame.clickNum !== "undefined") employPlusTimer = savegame.clickNum;
+	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
 
 alert("Load Successful!");
 
@@ -160,6 +189,8 @@ function startLoad() {
 	if (typeof savegame.earnPlus !== "undefined") earnPlus = savegame.earnPlus;
 	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
+	if (typeof savegame.clickNum !== "undefined") employPlusTimer = savegame.clickNum;
+	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
 
 alert("Load Successful!");
 
