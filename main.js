@@ -117,16 +117,6 @@ function addCompletion() {
   completion = completion += employPlusTimer;
   document.getElementById("completionNum").innerHTML = completion;
   document.getElementById("addPerSecond").innerHTML = employPlusTimer;
-  clickNum = clickNum += 1;
-  
-    if (clickNum = 100) {
-  	window.alert("level up! Now that you have completed a part of your rocket, you will now recieve a reward between 1 and 10,000 - keep your fingers crossed!");
-  	money = money += Math.floor((Math.random() * 10000) + 1);
-  	document.getElementById("moneyNum").innerHTML = money;
-  	level = level += 1;
-  	document.getElementById("levelNum").innerHTML = level;
-  	clickNum = 0;
-  }
 }
 
 function getSave(){
