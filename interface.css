@@ -195,3 +195,16 @@ button:hover {
     border-color: #e8e6e3;
     border-width: 8px;
 }
+
+.escapeImg {
+    background-image: url("http://dottech.org/wp-content/uploads/2013/11/apocalypse-wallpaper-1920x1080.jpg");
+}
+
+.finaleImg {
+    background-image: url("http://i.imgur.com/umRXsuV.gif"), url("http://stream1.gifsoup.com/view1/1441488/h-iia-rocket-launch-o.gif");
+}
+
+.all_container {
+    text-align: center;
+    font-family:  monospace, monospace;
+}
