@@ -43,8 +43,8 @@ function getWork() {
   document.getElementById("completionNum").innerHTML = completion; 
   
   if (clickNum >= 100) {
-  	window.alert("level up! Now that you have completed a part of your rocket, you will now recieve a random award - keep your fingers crossed!");
-  	money = money += Math.floor((Math.random() * 10000) + 1);
+  	window.alert("level up! Now that you have completed a part of your rocket, you will now recieve a random award between 1 and 1000 - keep your fingers crossed!");
+  	money = money += Math.floor((Math.random() * 1000) + 1);
   	document.getElementById("moneyNum").innerHTML = money;
   	level = level += 1;
   	document.getElementById("levelNum").innerHTML = level;
@@ -100,7 +100,15 @@ window.setInterval(function(){
 
 function addCompletion() {
   if (completion >= 100) {
-    window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)! Would you like restart?");
+    window.alert("BLAST OFF! You have succeded, and now will survive the destruction of the Earth (don't forget to bring popcorn)!");
+    
+    setTimeout(function(){
+    	document.getElementById("all_container").className = "hidden";
+    	document.getElementById("body").className = "finaleImg";
+    }, 10000);
+    
+    document.getElementById("body").className = "escapeImg";
+    document.getElementById("all_container").className = "all_container";
     completion = 0;
     document.getElementById("completionNum").innerHTML = completion;
     money = 0
