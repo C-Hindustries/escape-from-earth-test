@@ -147,6 +147,7 @@ function startGame() {
 
 function startLoad() {
      document.getElementById("starterDiv").className = "hidden";
+     document.getElementById("loaderDiv").className = "hidden";
      document.getElementById("contentDiv").className = "contentDiv";
      	"use strict";
 	var savegame = JSON.parse(localStorage.getItem("save"));
