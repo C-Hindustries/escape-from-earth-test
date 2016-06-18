@@ -144,3 +144,22 @@ function startGame() {
      document.getElementById("starterDiv").className = "hidden";
      document.getElementById("contentDiv").className = "contentDiv";
 }
+
+function startLoad() {
+     document.getElementById("starterDiv").className = "hidden";
+     document.getElementById("contentDiv").className = "contentDiv";
+     	"use strict";
+	var savegame = JSON.parse(localStorage.getItem("save"));
+	if (typeof savegame.money !== "undefined") money = savegame.money;
+	if (typeof savegame.completion !== "undefined") completion = savegame.completion;
+	if (typeof savegame.completionPlus !== "undefined") completionPlus = savegame.completionPlus;
+	if (typeof savegame.learnNumCost !== "undefined") learnNumCost = savegame.learnNumCost;
+	if (typeof savegame.employNumCost !== "undefined")  employNumCost = savegame. employNumCost;
+	if (typeof savegame.earnPlus !== "undefined") earnPlus = savegame.earnPlus;
+	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
+	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
+
+alert("Load Successful!");
+
+refreshStats();
+}
