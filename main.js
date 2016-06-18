@@ -201,9 +201,7 @@ refreshStats();
 
 function getReward() {
    if (money > rewardCost) {
-    money = money -= rewardCost;
-    document.getElementById("moneyNum").innerHTML = money;
-    money = money += Math.floor((Math.random() * 200) + 1);
+    money = (money -= rewardCost) += Math.floor((Math.random() * 200) + 1);
     document.getElementById("moneyNum").innerHTML = money;
 }
 }
