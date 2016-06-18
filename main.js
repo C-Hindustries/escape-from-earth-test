@@ -161,9 +161,11 @@ function getLoad(){
 	if (typeof savegame.earnPlus !== "undefined") earnPlus = savegame.earnPlus;
 	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
-	if (typeof savegame.clickNum !== "undefined") employPlusTimer = savegame.clickNum;
-	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
-	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
+	if (typeof savegame.clickNum !== "undefined") clickNum = savegame.clickNum;
+	if (typeof savegame.level !== "undefined") level = savegame.level;
+	if (typeof savegame.rewardCost !== "undefined") rewardCost = savegame.rewardCost;
+	if (typeof savegame.rewardCost2 !== "undefined") rewardCost2 = savegame.rewardCost2;
+	if (typeof savegame.rewardCost3 !== "undefined") rewardCost3 = savegame.rewardCost3;
 
 alert("Load Successful!");
 rocketName = gameStartPrompt;
