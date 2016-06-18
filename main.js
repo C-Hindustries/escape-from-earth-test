@@ -42,7 +42,7 @@ function getWork() {
   clickNum += 1;
   document.getElementById("completionNum").innerHTML = completion; 
   
-  if (clickNum = 100) {
+  if (clickNum >= 100) {
   	window.alert("level up! Now that you have completed a part of your rocket, you will now recieve a random award - keep your fingers crossed!");
   	money = money += Math.floor((Math.random() * 10000) + 1);
   	document.getElementById("moneyNum").innerHTML = money;
