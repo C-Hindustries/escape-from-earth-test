@@ -206,7 +206,7 @@ function startLoad() {
 	if (typeof savegame.earnPlus !== "undefined") earnPlus = savegame.earnPlus;
 	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
-	if (typeof savegame.clickNum !== "undefined") employPlusTimer = savegame.clickNum;
+	if (typeof savegame.clickNum !== "undefined") clickNum = savegame.clickNum;
 	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
 	if (typeof savegame.gambleCost !== "undefined") gambleCost = savegame.gambleCost;
 	if (typeof savegame.gambleMax !== "undefined") gambleMax = savegame.gambleMax;
