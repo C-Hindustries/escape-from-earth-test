@@ -250,7 +250,9 @@ function getReward3() {
 }
 
 function gambleAll() {
+	if (money >= gambleCost) {
 	money = money -= gambleCost;
 	money = money += Math.floor(Math.random() * (5000)) + 1;
 	document.getElementById("moneyNum").innerHTML = money;
+}
 }
