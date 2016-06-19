@@ -236,6 +236,6 @@ function getReward3() {
 
 function gambleAll() {
 	money = money -= money;
-	money = money += Math.floor((Math.random() * (money * 3)) + 1);
+	money = money += Math.floor((Math.random() * (money *= 3)) + (money /= 2));
 	document.getElementById("moneyNum").innerHTML = money;
 }
