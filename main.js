@@ -17,6 +17,7 @@ var rewardCost2 = 250
 var rewardCost3 = 500
 var gambleCost = money /= 2
 var gambleMax = money *= 2
+var gambleMin = money /= 4
 
 function refreshStats() {
   money = money;
@@ -147,6 +148,9 @@ function getSave(){
     rewardCost: rewardCost,
     rewardCost2: rewardCost2,
     rewardCost3: rewardCost3,
+    gambleCost: gambleCost,
+    gambleMax: gambleMax,
+    gambleMin: gambleMin,
 };
 	localStorage.setItem("save",JSON.stringify(save));
 	alert("Save Successful!");
@@ -168,6 +172,9 @@ function getLoad(){
 	if (typeof savegame.rewardCost !== "undefined") rewardCost = savegame.rewardCost;
 	if (typeof savegame.rewardCost2 !== "undefined") rewardCost2 = savegame.rewardCost2;
 	if (typeof savegame.rewardCost3 !== "undefined") rewardCost3 = savegame.rewardCost3;
+	if (typeof savegame.gambleCost !== "undefined") gambleCost = savegame.gambleCost;
+	if (typeof savegame.gambleMax !== "undefined") gambleMax = savegame.gambleMax;
+	if (typeof savegame.gambleMin !== "undefined") gambleMin = savegame.gambleMin;
 
 alert("Load Successful!");
 rocketName = gameStartPrompt;
@@ -201,6 +208,12 @@ function startLoad() {
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
 	if (typeof savegame.clickNum !== "undefined") employPlusTimer = savegame.clickNum;
 	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
+	if (typeof savegame.gambleCost !== "undefined") gambleCost = savegame.gambleCost;
+	if (typeof savegame.gambleMax !== "undefined") gambleMax = savegame.gambleMax;
+	if (typeof savegame.gambleMin !== "undefined") gambleMin = savegame.gambleMin;
+	if (typeof savegame.rewardCost !== "undefined") rewardCost = savegame.rewardCost;
+	if (typeof savegame.rewardCost2 !== "undefined") rewardCost2 = savegame.rewardCost2;
+	if (typeof savegame.rewardCost3 !== "undefined") rewardCost3 = savegame.rewardCost3;
 
 alert("Load Successful!");
 rocketName = gameStartPrompt;
@@ -236,8 +249,8 @@ function getReward3() {
 } 
 }
 
-function gambleAll() {
+function gambleAll(gambleMax, gambleCost) {
 	money = money -= gambleCost;
-	money = money += Math.floor((Math.random() * gambleMax) + 1);
+	money = money += Math.floor(Math.random() * (gambleMax - gambleMin + 1)) + gambleMin;
 	document.getElementById("moneyNum").innerHTML = money;
 }
