@@ -15,7 +15,7 @@ var level = 0
 var rewardCost = 100
 var rewardCost2 = 250
 var rewardCost3 = 500
-var gambleCost = money /= 2
+var gambleCost = 2500
 var gambleMax = money *= 2
 var gambleMin = money /= 4
 
@@ -251,6 +251,6 @@ function getReward3() {
 
 function gambleAll(gambleMax, gambleCost) {
 	money = money -= gambleCost;
-	money = money += Math.floor(Math.random() * (gambleMax - gambleMin)) + gambleMin;
+	money = money += Math.floor(Math.random() * (5000)) + 1;
 	document.getElementById("moneyNum").innerHTML = money;
 }
