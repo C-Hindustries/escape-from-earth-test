@@ -207,13 +207,13 @@ function startLoad() {
 	if (typeof savegame.promtionCost !== "undefined") promtionCost = savegame.promtionCost;
 	if (typeof savegame.employPlusTimer !== "undefined") employPlusTimer = savegame.employPlusTimer;
 	if (typeof savegame.clickNum !== "undefined") clickNum = savegame.clickNum;
-	if (typeof savegame.level !== "undefined") employPlusTimer = savegame.level;
-	if (typeof savegame.gambleCost !== "undefined") gambleCost = savegame.gambleCost;
-	if (typeof savegame.gambleMax !== "undefined") gambleMax = savegame.gambleMax;
-	if (typeof savegame.gambleMin !== "undefined") gambleMin = savegame.gambleMin;
+	if (typeof savegame.level !== "undefined") level = savegame.level;
 	if (typeof savegame.rewardCost !== "undefined") rewardCost = savegame.rewardCost;
 	if (typeof savegame.rewardCost2 !== "undefined") rewardCost2 = savegame.rewardCost2;
 	if (typeof savegame.rewardCost3 !== "undefined") rewardCost3 = savegame.rewardCost3;
+	if (typeof savegame.gambleCost !== "undefined") gambleCost = savegame.gambleCost;
+	if (typeof savegame.gambleMax !== "undefined") gambleMax = savegame.gambleMax;
+	if (typeof savegame.gambleMin !== "undefined") gambleMin = savegame.gambleMin;
 
 alert("Load Successful!");
 rocketName = gameStartPrompt;
