@@ -251,6 +251,6 @@ function getReward3() {
 
 function gambleAll(gambleMax, gambleCost) {
 	money = money -= gambleCost;
-	money = money += Math.floor(Math.random() * (gambleMax - gambleMin + 1)) + gambleMin;
+	money = money += return Math.floor(Math.random() * (gambleMax - gambleMin + 1)) + gambleMin;
 	document.getElementById("moneyNum").innerHTML = money;
 }
