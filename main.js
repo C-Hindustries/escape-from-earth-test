@@ -15,10 +15,12 @@ var level = 0
 var rewardCost = 100
 var rewardCost2 = 250
 var rewardCost3 = 500
+var gambleAllCost = money
 
 function refreshStats() {
   money = money;
   document.getElementById("moneyNum").innerHTML = money;
+  document.getElementById("gambleAllPrice").innerHTML = money;
   learnNumCost = learnNumCost;
   document.getElementById("learnNum").innerHTML = learnNumCost;
   completion = completion;
@@ -40,6 +42,7 @@ function refreshStats() {
 function getEarn() {
   money += 1;
   document.getElementById("moneyNum").innerHTML = money;
+  document.getElementById("gambleAllPrice").innerHTML = money;
 }
 
 function getWork() {
@@ -51,6 +54,7 @@ function getWork() {
   	window.alert("level up! Now that you have completed a part of your rocket, you will now recieve a random award between 1 and 1000 - keep your fingers crossed!");
   	money = money += Math.floor((Math.random() * 1000) + 1);
   	document.getElementById("moneyNum").innerHTML = money;
+  	document.getElementById("gambleAllPrice").innerHTML = money;
   	level = level += 1;
   	document.getElementById("levelNum").innerHTML = level;
   	clickNum = 0;
@@ -63,6 +67,7 @@ function getWork() {
     document.getElementById("completionNum").innerHTML = completion;
     money = 0
     document.getElementById("moneyNum").innerHTML = money;
+    document.getElementById("gambleAllPrice").innerHTML = money;
     completionPlus = 0.01;
     document.getElementById("workExtraNum").innerHTML = completionPlus;
     learnNumCost = 100;
@@ -75,12 +80,14 @@ function getWork() {
   function getEarn() {
   money =  money += earnPlus;
   document.getElementById("moneyNum").innerHTML = money;
+  document.getElementById("gambleAllPrice").innerHTML = money;
 }
 
 function getLearn() {
   if (money > learnNumCost) {
     money = money -= learnNumCost;
     document.getElementById("moneyNum").innerHTML = money;
+    document.getElementById("gambleAllPrice").innerHTML = money;
     learnNumCost = learnNumCost += learnNumCost *= 1.2;
     document.getElementById("learnNum").innerHTML = learnNumCost;
     completionPlus = completionPlus += 0.01;
@@ -93,6 +100,7 @@ function getEmploy() {
   if (money > employNumCost) {
     money = money-= employNumCost;
     document.getElementById("moneyNum").innerHTML = money;
+    document.getElementById("gambleAllPrice").innerHTML = money;
     employNumCost = employNumCost += employNumCost *= 1.2;
     document.getElementById("employNum").innerHTML = employNumCost;
     employPlusTimer = employPlusTimer += 0.001;
@@ -114,6 +122,7 @@ function addCompletion() {
     document.getElementById("completionNum").innerHTML = completion;
     money = 0
     document.getElementById("moneyNum").innerHTML = money;
+    document.getElementById("gambleAllPrice").innerHTML = money;
     completionPlus = 0.01;
     document.getElementById("workExtraNum").innerHTML = completionPlus;
     learnNumCost = 100;
@@ -211,8 +220,10 @@ function getReward() {
    if (money > rewardCost) {
     money = money -= rewardCost;
     document.getElementById("moneyNum").innerHTML = money;
+    document.getElementById("gambleAllPrice").innerHTML = money;
     money += Math.floor((Math.random() * 200) + 1);
     document.getElementById("moneyNum").innerHTML = money;
+    document.getElementById("gambleAllPrice").innerHTML = money;
 }
 }
 
@@ -220,8 +231,10 @@ function getReward2() {
     if (money > rewardCost2) {
       money = money -= rewardCost2;
       document.getElementById("moneyNum").innerHTML = money;
+      document.getElementById("gambleAllPrice").innerHTML = money;
       money += Math.floor((Math.random() * 500) + 1);
       document.getElementById("moneyNum").innerHTML = money;
+      document.getElementById("gambleAllPrice").innerHTML = money;
 } 
 }
 
@@ -229,7 +242,19 @@ function getReward3() {
     if (money > rewardCost2) {
       money = money -= rewardCost3;
       document.getElementById("moneyNum").innerHTML = money;
+      document.getElementById("gambleAllPrice").innerHTML = money;
       money += Math.floor((Math.random() * 1000) + 1);
       document.getElementById("moneyNum").innerHTML = money;
+      document.getElementById("gambleAllPrice").innerHTML = money;
 } 
+}
+
+function gambleAll() {
+    if (money >= gambleAllCost) {
+	money = money -= gambleAllCost;
+	document.getElementById("moneyNum").innerHTML = money;
+	money += Math.floor((Math.random() * money *= 2) + 1);
+        document.getElementById("moneyNum").innerHTML = money;
+        document.getElementById("gambleAllPrice").innerHTML = money;
+	}
 }
