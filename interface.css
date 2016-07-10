@@ -3,6 +3,7 @@ body{
     font-family: monospace, monospace;
     font-size: 45px;
     margin: 10px;
+    background-attachment: fixed;
 }
 
 button {
